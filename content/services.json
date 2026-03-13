@@ -1,0 +1,66 @@
+[
+  {
+    "slug": "web-design",
+    "title": "Web Design & Development",
+    "shortDescription": "Beautiful, conversion-focused websites built for local businesses.",
+    "description": "We design and develop fast, mobile-first websites that represent your brand and turn visitors into customers. Every site is hand-coded for performance and built with SEO in mind from day one.",
+    "features": [
+      "Custom responsive design",
+      "Mobile-first approach",
+      "Fast load times (Core Web Vitals optimized)",
+      "CMS integration",
+      "Contact forms & lead capture",
+      "Google Analytics setup"
+    ],
+    "icon": "Monitor",
+    "price": "Starting at $1,500"
+  },
+  {
+    "slug": "seo-optimization",
+    "title": "SEO Optimization",
+    "shortDescription": "Rank higher on Google and get found by local customers.",
+    "description": "Our local SEO services help your business appear at the top of Google search results when customers in your area are looking for your services. We handle everything from keyword research to on-page optimization and citation building.",
+    "features": [
+      "Local keyword research",
+      "On-page SEO",
+      "Google Business Profile optimization",
+      "Citation building & cleanup",
+      "Monthly ranking reports",
+      "Schema markup"
+    ],
+    "icon": "TrendingUp",
+    "price": "Starting at $500/mo"
+  },
+  {
+    "slug": "google-ads",
+    "title": "Google Ads Management",
+    "shortDescription": "Pay-per-click campaigns that deliver measurable ROI.",
+    "description": "Stop wasting money on ads that don't convert. We build and manage Google Ads campaigns specifically designed for local service businesses — driving qualified leads directly to your door.",
+    "features": [
+      "Campaign strategy & setup",
+      "Keyword targeting",
+      "Ad copy writing",
+      "Landing page optimization",
+      "Conversion tracking",
+      "Monthly performance reports"
+    ],
+    "icon": "BarChart2",
+    "price": "Starting at $400/mo + ad spend"
+  },
+  {
+    "slug": "website-maintenance",
+    "title": "Website Maintenance",
+    "shortDescription": "Keep your website fast, secure, and up to date.",
+    "description": "Your website is your hardest-working employee — it should always be running at peak performance. Our maintenance plans cover security updates, backups, content updates, and performance monitoring.",
+    "features": [
+      "Monthly security updates",
+      "Daily backups",
+      "Content updates (up to 2 hrs/mo)",
+      "Uptime monitoring",
+      "Performance checks",
+      "Priority support"
+    ],
+    "icon": "Shield",
+    "price": "Starting at $150/mo"
+  }
+]
