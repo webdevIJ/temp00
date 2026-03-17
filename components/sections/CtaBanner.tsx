@@ -9,9 +9,9 @@ interface CtaBannerProps {
 }
 
 export default function CtaBanner({
-  heading = "Ready to Grow Your Business?",
-  subheading = "Get a free website audit and SEO consultation — no strings attached.",
-  buttonLabel = "Get My Free Quote",
+  heading = "Ready to Get Started?",
+  subheading = "Contact us today to learn how we can help you.",
+  buttonLabel = "Contact Us",
   buttonHref = "/contact",
 }: CtaBannerProps) {
   return (

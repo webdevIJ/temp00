@@ -2,21 +2,11 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-import { JsonLd } from "@/components/seo/JsonLd";
-import { localBusinessSchema } from "@/lib/schema";
-import { SITE_NAME, DEFAULT_DESCRIPTION, SITE_URL } from "@/lib/seo";
+import config from "@/lib/config";
 
 export const metadata: Metadata = {
-  title: {
-    default: `${SITE_NAME} — Web Design & Local SEO`,
-    template: `%s | ${SITE_NAME}`,
-  },
-  description: DEFAULT_DESCRIPTION,
-  metadataBase: new URL(SITE_URL),
-  openGraph: {
-    siteName: SITE_NAME,
-    type: "website",
-  },
+  title: config.businessName,
+  description: config.description,
 };
 
 export default function RootLayout({
@@ -27,7 +17,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <JsonLd data={localBusinessSchema()} />
         <Navbar />
         <main>{children}</main>
         <Footer />

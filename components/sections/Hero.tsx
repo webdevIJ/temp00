@@ -36,10 +36,10 @@ export default function Hero() {
 
           <div className="flex flex-wrap gap-4">
             <Link
-              href="/contact"
+              href={config.ctaButton.href}
               className="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg bg-blue-600 hover:bg-blue-500 font-semibold text-white transition-colors"
             >
-              Get a Free Quote <ArrowRight className="w-4 h-4" />
+              {config.ctaButton.label} <ArrowRight className="w-4 h-4" />
             </Link>
             <Link
               href="/services"

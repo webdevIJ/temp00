@@ -6,16 +6,6 @@ import { Menu, X, Zap } from "lucide-react";
 import { cn } from "@/lib/utils";
 import config from "@/lib/config";
 
-const navLinks = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
-  { href: "/services", label: "Services" },
-  { href: "/blog", label: "Blog" },
-  { href: "/faq", label: "FAQ" },
-  { href: "/reviews", label: "Reviews" },
-  { href: "/contact", label: "Contact" },
-];
-
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
@@ -31,7 +21,7 @@ export default function Navbar() {
 
           {/* Desktop nav */}
           <nav className="hidden md:flex items-center gap-6">
-            {navLinks.map((link) => (
+            {config.navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
@@ -41,10 +31,10 @@ export default function Navbar() {
               </Link>
             ))}
             <Link
-              href="/contact"
+              href={config.ctaButton.href}
               className="ml-2 px-4 py-2 rounded-lg bg-blue-600 text-white text-sm font-semibold hover:bg-blue-700 transition-colors"
             >
-              Get a Free Quote
+              {config.ctaButton.label}
             </Link>
           </nav>
 
@@ -67,7 +57,7 @@ export default function Navbar() {
         )}
       >
         <nav className="flex flex-col px-4 py-4 gap-3 bg-white">
-          {navLinks.map((link) => (
+          {config.navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
@@ -78,11 +68,11 @@ export default function Navbar() {
             </Link>
           ))}
           <Link
-            href="/contact"
+            href={config.ctaButton.href}
             onClick={() => setOpen(false)}
             className="mt-2 text-center px-4 py-2 rounded-lg bg-blue-600 text-white text-sm font-semibold hover:bg-blue-700"
           >
-            Get a Free Quote
+            {config.ctaButton.label}
           </Link>
         </nav>
       </div>

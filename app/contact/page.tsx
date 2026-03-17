@@ -105,11 +105,11 @@ export default function ContactPage() {
                     </label>
                     <select className="w-full px-4 py-2.5 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm text-slate-700">
                       <option value="">Select a service…</option>
-                      <option value="web-design">Web Design & Development</option>
-                      <option value="seo">SEO Optimization</option>
-                      <option value="google-ads">Google Ads Management</option>
-                      <option value="maintenance">Website Maintenance</option>
-                      <option value="bundle">Full Package (Web + SEO)</option>
+                      <option value="service-one">Service One</option>
+                      <option value="service-two">Service Two</option>
+                      <option value="service-three">Service Three</option>
+                      <option value="service-four">Service Four</option>
+                      <option value="other">Other</option>
                     </select>
                   </div>
                   <div>
@@ -166,7 +166,7 @@ export default function ContactPage() {
                   <div>
                     <p className="font-semibold text-slate-900 text-sm">Location</p>
                     <p className="text-slate-600 text-sm">{config.address.city}, {config.address.state} {config.address.zip}</p>
-                    <p className="text-slate-400 text-xs mt-0.5">Serving local businesses in the area</p>
+                    <p className="text-slate-400 text-xs mt-0.5">Serving clients everywhere</p>
                   </div>
                 </div>
               </div>

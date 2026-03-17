@@ -1,14 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { buildMetadata } from "@/lib/seo";
 import { CheckCircle2, ArrowRight } from "lucide-react";
+import config from "@/lib/config";
 
-export const metadata: Metadata = buildMetadata({
-  title: "Thank You!",
-  description: "Thank you for contacting Apex Digital. We'll be in touch shortly.",
-  path: "/thank-you",
-  noIndex: true,
-});
+export const metadata: Metadata = {
+  title: `Thank You | ${config.businessName}`,
+  description: "Thank you for contacting us.",
+  robots: { index: false, follow: false },
+};
 
 export default function ThankYouPage() {
   return (
@@ -22,7 +21,6 @@ export default function ThankYouPage() {
         </h1>
         <p className="text-slate-500 text-lg leading-relaxed mb-8">
           Your message has been received. We typically respond within one business day.
-          In the meantime, feel free to explore our blog for tips on growing your business online.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
           <Link
@@ -32,10 +30,10 @@ export default function ThankYouPage() {
             Back to Home
           </Link>
           <Link
-            href="/blog"
+            href="/services"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-slate-200 text-slate-700 font-semibold hover:bg-slate-50 transition-colors"
           >
-            Read Our Blog <ArrowRight className="w-4 h-4" />
+            View Our Services <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
       </div>

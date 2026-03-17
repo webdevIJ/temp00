@@ -1,16 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { buildMetadata } from "@/lib/seo";
 import { getAllServices } from "@/lib/services";
 import { Monitor, TrendingUp, BarChart2, Shield, ArrowRight } from "lucide-react";
 import CtaBanner from "@/components/sections/CtaBanner";
+import config from "@/lib/config";
 
-export const metadata: Metadata = buildMetadata({
-  title: "Services",
-  description:
-    "Web design, local SEO, Google Ads management, and website maintenance for small businesses. Affordable packages with real results.",
-  path: "/services",
-});
+export const metadata: Metadata = {
+  title: `Services | ${config.businessName}`,
+  description: config.description,
+};
 
 const iconMap: Record<string, React.ElementType> = {
   Monitor,
@@ -29,11 +27,10 @@ export default function ServicesPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-blue-400 font-semibold text-sm uppercase tracking-widest mb-4">Our Services</p>
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-6">
-            Everything Your Business Needs to Grow Online
+            What We Offer
           </h1>
           <p className="text-slate-300 text-lg max-w-2xl mx-auto">
-            From a brand-new website to a complete local SEO strategy — we have the right service for every
-            stage of your business.
+            We have the right solution for every stage of your business.
           </p>
         </div>
       </section>

@@ -1,88 +1,93 @@
-// ****************************************************
-//  Central Configuration. Change here for each client
-// ****************************************************
+// ============================================================
+//  SITE CONFIG — Edit this file to customize the template
+// ============================================================
 
 const config = {
-  // --- Business Identity ---
-  businessName: "",
-  tagline: "short description of what you do",
-  description:
-    "A 1–2 sentence description used in Google search previews and social shares. Make it specific to the client's city and industry.",
+  // ── Business Info ──────────────────────────────────────────
+  businessName: "Business Name",
+  tagline: "tagline goes here",
+  description: "A brief description of your business for search engines and social sharing.",
 
-  // --- Contact Details ---
+  // ── Contact ────────────────────────────────────────────────
   phone: "(000) 000-0000",
-  phoneHref: "tel:+10000000000", // E.164 format for <a href>
-  email: "hello@yourbusiness.com",
+  phoneHref: "tel:+10000000000",
+  email: "hello@example.com",
   address: {
     street: "123 Main Street",
     city: "Your City",
-    state: "ST", // 2-letter abbreviation
+    state: "ST",
     zip: "00000",
-    country: "US",
   },
 
-  // --- Online / Social Media Presence ---
-  siteUrl: process.env.NEXT_PUBLIC_SITE_URL ?? "https://yourdomain.com",
+  // ── Links ──────────────────────────────────────────────────
+  siteUrl: process.env.NEXT_PUBLIC_SITE_URL ?? "https://example.com",
   social: {
-    facebook: "https://facebook.com/yourbusiness",
-    linkedin: "https://linkedin.com/company/yourbusiness",
-    twitter: "https://twitter.com/yourbusiness",
+    facebook: "",
+    linkedin: "",
+    twitter: "",
   },
 
-  // --- Geographic Coordinates (for Google structured data) ---
-  // Found at: https://www.latlong.net/
-  geo: {
-    latitude: 0.0,
-    longitude: 0.0,
-  },
-
-  // --- Business Hours ---
+  // ── Hours ──────────────────────────────────────────────────
   hours: {
     days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
     open: "09:00",
     close: "17:00",
   },
 
-  // --- Homepage banner (hero) ---
+  // ── Homepage Hero ──────────────────────────────────────────
   hero: {
-    eyebrow: "Web Design & Local SEO", // small label above the heading
-    heading: "Get More Customers", // first line of the big heading
-    headingAccent: "From Google.", // second line 
-    subheading:
-      "We build high-performing websites and local SEO strategies for local businesses that want to grow their revenue — without the big-agency price tag.",
+    eyebrow: "Welcome",
+    heading: "Main Headline",
+    headingAccent: "Goes Here",
+    subheading: "A supporting sentence or two that explains what you do and why visitors should care.",
     highlights: [
-      "No long-term contracts",
-      "Results-driven approach",
-      "100% US-based team",
-      "Free initial consultation",
+      "Benefit or feature 1",
+      "Benefit or feature 2",
+      "Benefit or feature 3",
+      "Benefit or feature 4",
     ],
   },
 
-  // --- Stats Bar (shown just below the hero) ---
+  // ── Stats Section ──────────────────────────────────────────
   stats: [
-    { value: "50+",    label: "Clients Served" },
-    { value: "3x",     label: "Avg. Traffic Increase" },
-    { value: "5.0",    label: "Average Review Score" },
-    { value: "< 2 wks", label: "Average Launch Time" },
+    { value: "100+", label: "Stat Label 1" },
+    { value: "50+", label: "Stat Label 2" },
+    { value: "5.0", label: "Stat Label 3" },
+    { value: "24/7", label: "Stat Label 4" },
   ],
 
-  // --- About Page ---
+  // ── About Page ─────────────────────────────────────────────
   about: {
+    headline: "About Us",
+    intro: "A brief intro paragraph about your company.",
     story: [
-      "Add a paragraph about how the business got started.",
-      "Add a second paragraph about your approach or philosophy.",
-      "Add a third paragraph about what makes you different.",
+      "First paragraph of your story.",
+      "Second paragraph of your story.",
+      "Third paragraph of your story.",
     ],
     bullets: [
-      "Founded in [City, State]",
-      "100% US-based team",
-      "Focused on local businesses",
-      "No long-term contracts required",
+      "Fact about your business",
+      "Another fact",
+      "One more fact",
     ],
   },
 
-  // --- Footer ---
-  footerTagline: "Web design and local SEO for small businesses that want to grow.",
+  // ── Footer ─────────────────────────────────────────────────
+  footerTagline: "A short tagline for the footer.",
+
+  // ── Navigation ─────────────────────────────────────────────
+  navLinks: [
+    { href: "/", label: "Home" },
+    { href: "/about", label: "About" },
+    { href: "/services", label: "Services" },
+    { href: "/contact", label: "Contact" },
+  ],
+
+  // ── CTA Button ─────────────────────────────────────────────
+  ctaButton: {
+    label: "Get Started",
+    href: "/contact",
+  },
 };
 
 export default config;

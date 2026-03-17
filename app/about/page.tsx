@@ -1,33 +1,31 @@
 import type { Metadata } from "next";
-import { buildMetadata } from "@/lib/seo";
 import CtaBanner from "@/components/sections/CtaBanner";
 import { CheckCircle2, Target, Heart, Zap } from "lucide-react";
 import config from "@/lib/config";
 
-export const metadata: Metadata = buildMetadata({
-  title: "About Us",
-  description: `Learn about ${config.businessName} — ${config.tagline}`,
-  path: "/about",
-});
+export const metadata: Metadata = {
+  title: `About Us | ${config.businessName}`,
+  description: config.description,
+};
 
 const values = [
   {
     icon: Target,
     title: "Results First",
     description:
-      "We measure our success by the leads and revenue we generate for clients — not vanity metrics.",
+      "We measure our success by the value we deliver to our clients — not vanity metrics.",
   },
   {
     icon: Heart,
-    title: "Small Business Focus",
+    title: "Client Focus",
     description:
-      "We only work with local businesses, so our strategies are purpose-built for your market and goals.",
+      "We prioritize understanding your unique needs to deliver solutions that work for you.",
   },
   {
     icon: Zap,
     title: "Move Fast",
     description:
-      "Most agencies take months. We deliver beautiful, SEO-ready websites in weeks without cutting corners.",
+      "We deliver quality results quickly without cutting corners.",
   },
   {
     icon: CheckCircle2,

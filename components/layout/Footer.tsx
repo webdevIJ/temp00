@@ -1,29 +1,8 @@
 import Link from "next/link";
 import { Zap, Mail, Phone, MapPin, Facebook, Linkedin, Twitter } from "lucide-react";
 import config from "@/lib/config";
-import { getAllLocations } from "@/lib/locations";
-
-const services = [
-  { href: "/services/web-design", label: "Web Design" },
-  { href: "/services/seo-optimization", label: "SEO Optimization" },
-  { href: "/services/google-ads", label: "Google Ads" },
-  { href: "/services/website-maintenance", label: "Maintenance" },
-];
-
-const company = [
-  { href: "/about", label: "About Us" },
-  { href: "/blog", label: "Blog" },
-  { href: "/reviews", label: "Client Reviews" },
-  { href: "/faq", label: "FAQ" },
-  { href: "/contact", label: "Contact" },
-];
 
 export default function Footer() {
-  const locations = getAllLocations().map((l) => ({
-    href: `/locations/${l.slug}`,
-    label: `${l.city}, ${l.stateAbbr}`,
-  }));
-
   return (
     <footer className="bg-slate-900 text-slate-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -54,11 +33,11 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Services */}
+          {/* Navigation */}
           <div>
-            <h3 className="font-semibold text-white mb-4">Services</h3>
+            <h3 className="font-semibold text-white mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              {services.map((link) => (
+              {config.navLinks.map((link) => (
                 <li key={link.href}>
                   <Link href={link.href} className="text-sm hover:text-blue-400 transition-colors">
                     {link.label}
@@ -68,17 +47,30 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Company */}
+          {/* Services */}
           <div>
-            <h3 className="font-semibold text-white mb-4">Company</h3>
+            <h3 className="font-semibold text-white mb-4">Services</h3>
             <ul className="space-y-2">
-              {company.map((link) => (
-                <li key={link.href}>
-                  <Link href={link.href} className="text-sm hover:text-blue-400 transition-colors">
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
+              <li>
+                <Link href="/services/service-one" className="text-sm hover:text-blue-400 transition-colors">
+                  Service One
+                </Link>
+              </li>
+              <li>
+                <Link href="/services/service-two" className="text-sm hover:text-blue-400 transition-colors">
+                  Service Two
+                </Link>
+              </li>
+              <li>
+                <Link href="/services/service-three" className="text-sm hover:text-blue-400 transition-colors">
+                  Service Three
+                </Link>
+              </li>
+              <li>
+                <Link href="/services/service-four" className="text-sm hover:text-blue-400 transition-colors">
+                  Service Four
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -99,20 +91,6 @@ export default function Footer() {
                 <span>{config.address.city}, {config.address.state} {config.address.zip}</span>
               </li>
             </ul>
-            {locations.length > 0 && (
-              <div className="mt-6">
-                <p className="text-xs font-semibold text-white uppercase tracking-wide mb-2">Serving</p>
-                <ul className="space-y-1">
-                  {locations.map((loc) => (
-                    <li key={loc.href}>
-                      <Link href={loc.href} className="text-sm hover:text-blue-400 transition-colors">
-                        {loc.label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
           </div>
         </div>
 

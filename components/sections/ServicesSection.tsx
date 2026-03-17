@@ -20,10 +20,10 @@ export default function ServicesSection() {
         <div className="text-center max-w-2xl mx-auto mb-14">
           <p className="text-blue-600 font-semibold text-sm uppercase tracking-widest mb-2">What We Do</p>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-4">
-            Everything You Need to Grow Online
+            Our Services
           </h2>
           <p className="text-slate-500 text-lg">
-            From your first website to a full digital marketing strategy — we handle it all.
+            Explore the solutions we offer to help you succeed.
           </p>
         </div>
 
